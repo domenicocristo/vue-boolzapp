@@ -17,10 +17,12 @@ body {
 #container {
     position: absolute;
     top: 20%;
-    left: 10%;
+    left: 4%;
 }
 
+/* nav */
 nav {
+    display: inline-block;
     background-color: #eaeaea;
 }
 
@@ -68,7 +70,7 @@ i {
 
 #notifications a {
     display:  block;
-    color: #507787;
+    color: #6a7376;
 }
 
 #search-contacts {
@@ -82,6 +84,7 @@ i {
     height: 70%;
     width: 97%;
     border: none;
+    border-radius: 5px;
 }
 
 #container-contacts {
@@ -109,3 +112,76 @@ i {
 .text.img-contacts {
     display: inline-block;
 }
+/* /nav */
+
+/* chat */
+#chat {
+    display: inline-block;
+}
+
+#chat-header {
+    display: flex;
+    align-items: center;
+    background-color: #eaeaea;
+    border-left: 1px solid #b1b1b1;
+}
+
+#chat-header img {
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #eaeaea;
+}
+
+.text-chat {
+    display: inline-block;
+    margin-right: 300px;
+}
+
+.text-chat span {
+    color: #6a7376;
+}
+
+#chat-main {
+    height: 500px;
+    background-image: url(img/backround-img.jpg);
+}
+
+.user {
+    display: block;
+    float: right;
+    background-color: #d5f9ba;
+    padding: 20px 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.interlocutor {
+    display: block;
+    float: left;
+    background-color: #fff;
+    padding: 20px 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#input-chat {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #f3eee9;
+}
+
+#input-chat i {
+    color: #6a7376;
+    margin: 30px;
+}
+
+#input-chat input {
+    height: 80%;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+}
+/* /chat */
