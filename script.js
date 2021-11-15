@@ -1,0 +1,1 @@
+// 1. creare un array di contatti da stampare in pagina
