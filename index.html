@@ -40,9 +40,9 @@
                             <img :src="contact.avatar" class="img-contacts">
                             <div class="text-contacts">
                                 <h3>{{contact.name}}</h3>
-                                <p></p>
+                                <p>{{contact.message[contact.message.length -1].text}}...</p>
                             </div>
-                            <div></div>
+                            <span class="date-contacts">{{contact.message[contact.message.length -1].date}}</span>
                         </li>
                     </ul>
                 </section>
@@ -62,18 +62,28 @@
             </section>
 
             <section id="chat-main">
-                <div class="user">
-                    <p>Hai portato a spasso il cane?</p>
-                </div>
+                <ul>  
+                    <li class="user">
+                        <p>
+                            Hai portato a spasso il cane? 
+                            <span class="date-chat">10/01/2020 15:30:55</span>
+                        </p>
+                    </li>
 
-                <div class="user">
-                    <p>Ricordati di dargli da mangiare</p>
-                </div>
-
-                <div class="interlocutor">
-                    <p>Tutto fatto!</p>
-                </div>
-            
+                    <li class="user">
+                        <p>
+                            Ricordati di dargli da mangiare
+                            <span class="date-chat">10/01/2020 15:50:00</span>
+                        </p>
+                    </li>
+                    
+                    <li class="interlocutor">
+                        <p>
+                            Tutto fatto!
+                            <span class="date-chat">28/03/2020 16:15:22</span>
+                        </p>
+                    </li>
+                </ul>
             </section>
 
             <section id="input-chat">

@@ -14,14 +14,11 @@ body {
     background-color: #019588;
 }
 
-#container {
+/* nav */
+nav {
     position: absolute;
     top: 20%;
     left: 4%;
-}
-
-/* nav */
-nav {
     display: inline-block;
     background-color: #eaeaea;
 }
@@ -91,31 +88,45 @@ i {
     height: 600px;
 }
 
-#container-contacts ul {
+ul {
     list-style-type: none;
 }
 
 #container-contacts li {
-    display: flex;
-    align-items: center;
     background-color: #fff;
     margin: 1px;
     cursor: pointer;
 }
 
 .img-contacts {
+    display: inline-block;
     height: 50px;
     border-radius: 50%;
     margin: 10px;
 }
 
-.text.img-contacts {
+.text-contacts {
     display: inline-block;
+}
+
+.text-contacts p {
+    color: #6a7376;
+    font-size: 13px;
+}
+
+.date-contacts {
+    float: right;
+    color: #6a7376;
+    margin: 10px;
+    font-size: 13px;
 }
 /* /nav */
 
 /* chat */
 #chat {
+    position: absolute;
+    top: 20%;
+    right: 5%;
     display: inline-block;
 }
 
@@ -144,26 +155,40 @@ i {
 }
 
 #chat-main {
-    height: 500px;
-    background-image: url(img/backround-img.jpg);
+    display: flex;
+    flex-direction: column;
+    height: 665px;
+    background-color: #e5ddd5;
 }
 
 .user {
-    display: block;
-    float: right;
+    display: flex;
+    justify-content: right;
+}
+
+.user p {
     background-color: #d5f9ba;
-    padding: 20px 10px;
+    padding: 10px;
     border-radius: 10px;
     margin: 5px;
 }
 
 .interlocutor {
-    display: block;
-    float: left;
+    display: flex;
+    justify-content: left;
+}
+
+.interlocutor p {
     background-color: #fff;
-    padding: 20px 10px;
+    padding: 10px;
     border-radius: 10px;
     margin: 5px;
+}
+
+.date-chat {
+    display: block;
+    color: #6a7376;
+    font-size: 13px;s
 }
 
 #input-chat {

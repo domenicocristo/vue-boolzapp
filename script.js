@@ -23,7 +23,7 @@ var boolzapp = new Vue (
                         },
 
                         {
-                            date: "10/01/2020 16:15:22",
+                            date: "28/03/2020 16:15:22",
                             text: "Tutto fatto!",
                             status: "received"
                         }
@@ -49,7 +49,7 @@ var boolzapp = new Vue (
 
                         {
                             date: "10/01/2020 16:15:22",
-                            text: "Tutto fatto!",
+                            text: "Mi piacerebbe ma devo a",
                             status: "received"
                         }
                     ],
@@ -74,7 +74,7 @@ var boolzapp = new Vue (
 
                         {
                             date: "10/01/2020 16:15:22",
-                            text: "Tutto fatto!",
+                            text: "Ah scusa!",
                             status: "received"
                         }
                     ],
@@ -99,7 +99,7 @@ var boolzapp = new Vue (
 
                         {
                             date: "10/01/2020 16:15:22",
-                            text: "Tutto fatto!",
+                            text: "Si, ma preferirei andare al ci",
                             status: "received"
                         }
                     ],
