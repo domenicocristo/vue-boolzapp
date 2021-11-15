@@ -44,13 +44,13 @@ i {
     margin-right: 15px;
 }
 
-#nav-main {
+#notifications {
     display: flex;
     align-items: center;
     background-color: #8ddafb;
 }
 
-#nav-main i {
+#notifications i {
     background-color: #fff;
     color: #8ddafb;
     border-radius: 50%;
@@ -58,6 +58,28 @@ i {
     margin: 10px;
 }
 
-#nav-main a {
+#notifications a {
     color: #507787;
+}
+
+#search-contacts {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-contacts input{
+    height: 70%;
+    width: 97%;
+    border: none;
+}
+
+#container-contacts ul {
+    list-style-type: none;
+}
+
+.img-contacts {
+    height: 50px;
+    border-radius: 50%;
 }
