@@ -32,6 +32,8 @@ nav {
 #nav-header img {
     height: 50px;
     border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
 }
 
 #nav-header h3 {
@@ -42,6 +44,7 @@ i {
     font-size: 20px;
     color: #b1b1b1;
     margin-right: 15px;
+    cursor: pointer;
 }
 
 #notifications {
@@ -51,6 +54,7 @@ i {
 }
 
 #notifications i {
+    display:  inline-block;
     background-color: #fff;
     color: #8ddafb;
     border-radius: 50%;
@@ -58,7 +62,12 @@ i {
     margin: 10px;
 }
 
+#text-notifications {
+    display:  inline-block;
+}
+
 #notifications a {
+    display:  block;
     color: #507787;
 }
 
@@ -75,11 +84,28 @@ i {
     border: none;
 }
 
+#container-contacts {
+    height: 600px;
+}
+
 #container-contacts ul {
     list-style-type: none;
+}
+
+#container-contacts li {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin: 1px;
+    cursor: pointer;
 }
 
 .img-contacts {
     height: 50px;
     border-radius: 50%;
+    margin: 10px;
+}
+
+.text.img-contacts {
+    display: inline-block;
 }

@@ -28,7 +28,9 @@ var boolzapp = new Vue (
                             status: "received"
                         }
                     ],
+                },
 
+                {
                     name: "Fabio",
                     avatar: "img/avatar_2.jpg",
                     visible: "true",
@@ -51,7 +53,9 @@ var boolzapp = new Vue (
                             status: "received"
                         }
                     ],
+                },
 
+                {
                     name: "Samuele",
                     avatar: "img/avatar_3.jpg",
                     visible: "true",
@@ -74,7 +78,9 @@ var boolzapp = new Vue (
                             status: "received"
                         }
                     ],
+                },
 
+                {
                     name: "Mario",
                     avatar: "img/avatar_4.jpg",
                     visible: "true",
@@ -97,7 +103,7 @@ var boolzapp = new Vue (
                             status: "received"
                         }
                     ],
-                }
+                },
             ]
         }
             

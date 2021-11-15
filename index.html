@@ -24,20 +24,24 @@
             <section id="nav-main">
                 <section id="notifications">
                     <i class="fas fa-bell-slash"></i>
-                    <h3>Ricevi notifiche di nuovi messaggi</h3>
-                    <a href="">Attiva notifiche Dekstop</a>
+                    <div id="text-notifications">
+                        <h3>Ricevi notifiche di nuovi messaggi</h3>
+                        <a href="">Attiva notifiche Dekstop</a>
+                    </div>
                 </section>
 
                 <section id="search-contacts">
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input type="text" placeholder=" Cerca o inizia una nuova chat">
                 </section>
 
                 <section id="container-contacts">
                     <ul>
                         <li v-for="contact, i in contacts" :class="contact" :key="i">
                             <img :src="contact.avatar" class="img-contacts">
-                            <h2>{{contact.name}}</h2>
-                            <p></p>
+                            <div class="text-contacts">
+                                <h3>{{contact.name}}</h3>
+                                <p></p>
+                            </div>
                             <div></div>
                         </li>
                     </ul>
