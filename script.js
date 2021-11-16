@@ -12,8 +12,9 @@ var boolzapp = new Vue (
                     name: "Michele",
                     avatar: "img/avatar_1.jpg",
                     visible: "true",
-                    message: [
+                    messages: [
                         {
+                            activeMessage: 0,
                             date: "10/01/2020 15:30:55",
                             text: "Hai portato a spasso il cane?",
                             status: "sent"
@@ -37,7 +38,7 @@ var boolzapp = new Vue (
                     name: "Fabio",
                     avatar: "img/avatar_2.jpg",
                     visible: "true",
-                    message: [
+                    messages: [
                         {
                             date: "10/01/2020 15:30:55",
                             text: "Hai portato a spasso il cane?",
@@ -62,7 +63,7 @@ var boolzapp = new Vue (
                     name: "Samuele",
                     avatar: "img/avatar_3.jpg",
                     visible: "true",
-                    message: [
+                    messages: [
                         {
                             date: "10/01/2020 15:30:55",
                             text: "Hai portato a spasso il cane?",
@@ -87,7 +88,7 @@ var boolzapp = new Vue (
                     name: "Mario",
                     avatar: "img/avatar_4.jpg",
                     visible: "true",
-                    message: [
+                    messages: [
                         {
                             date: "10/01/2020 15:30:55",
                             text: "Hai portato a spasso il cane?",
@@ -110,7 +111,9 @@ var boolzapp = new Vue (
             ],
         },
         methods: {
-            
+            selectContact: function() {
+
+            }
         }
             
     }

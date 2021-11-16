@@ -44,9 +44,9 @@
                             <img :src="contact.avatar" class="img-contacts">
                             <div class="text-contacts">
                                 <h3>{{contact.name}}</h3>
-                                <p>{{contact.message[contact.message.length -1].text}}...</p>
+                                <p>{{contact.messages[contact.messages.length -1].text}}...</p>
                             </div>
-                            <span class="date-contacts">{{contact.message[contact.message.length -1].date}}</span>
+                            <span class="date-contacts">{{contact.messages[contact.messages.length -1].date}}</span>
                         </li>
                     </ul>
                 </section>
@@ -67,10 +67,10 @@
 
             <section id="chat-main">
                 <ul>  
-                    <li v-for="contact, i in contacts" :class="contact.message[activeContact].status" :key="i">
+                    <li v-for="message, i in contacts.messages" :class="message.status" :key="i">
                         <div>
-                            <p>{{contact.message[activeContact].text}}</p>  
-                            <span class="date-chat">{{contact.message[activeContact].date}}</span>
+                            <p>{{message.text}}</p>  
+                            <span class="date-chat">{{message.date}}</span>
                         </div>
                     </li>
                 </ul>
