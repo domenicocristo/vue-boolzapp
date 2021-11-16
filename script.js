@@ -1,4 +1,6 @@
 // 1. creare un array di contatti da stampare in pagina
+// 2. visualizzare tutti i messaggi relativi al contatto 
+// 2.1 facendo click sui contatti si appaiono le conversazioni relative al contatto
 
 var boolzapp = new Vue (
     {

@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
 body {
     background-color: #d9dbd4;
-    position: relative;
 }
 
 .layout-back {
@@ -14,11 +14,13 @@ body {
     background-color: #019588;
 }
 
+#container {
+    display: flex;
+    justify-content: center;
+}
+
 /* nav */
 nav {
-    position: absolute;
-    top: 20%;
-    left: 4%;
     display: inline-block;
     background-color: #eaeaea;
 }
@@ -98,6 +100,10 @@ ul {
     cursor: pointer;
 }
 
+#container-contacts li:hover {
+    background-color: #d6d6d6;
+}
+
 .img-contacts {
     display: inline-block;
     height: 50px;
@@ -124,9 +130,6 @@ ul {
 
 /* chat */
 #chat {
-    position: absolute;
-    top: 20%;
-    right: 5%;
     display: inline-block;
 }
 
@@ -134,7 +137,7 @@ ul {
     display: flex;
     align-items: center;
     background-color: #eaeaea;
-    border-left: 1px solid #b1b1b1;
+    border-left: 1px solid #d6d6d6;
 }
 
 #chat-header img {
@@ -164,6 +167,7 @@ ul {
 .user {
     display: flex;
     justify-content: right;
+    margin-right: 50px;
 }
 
 .user p {
@@ -176,6 +180,7 @@ ul {
 .interlocutor {
     display: flex;
     justify-content: left;
+    margin-left: 50px;
 }
 
 .interlocutor p {
