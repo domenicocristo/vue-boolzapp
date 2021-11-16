@@ -67,7 +67,7 @@
 
             <section id="chat-main">
                 <ul>  
-                    <li v-for="message, i in contacts.messages" :class="message.status" :key="i">
+                    <li v-for="message, i in contacts.[activeContact].messages" :class="message.status" :key="i">
                         <div>
                             <p>{{message.text}}</p>  
                             <span class="date-chat">{{message.date}}</span>
