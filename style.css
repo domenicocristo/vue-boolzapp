@@ -164,26 +164,26 @@ ul {
     background-color: #e5ddd5;
 }
 
-.user {
+.sent {
     display: flex;
     justify-content: right;
     margin-right: 50px;
 }
 
-.user p {
+.sent div {
     background-color: #d5f9ba;
     padding: 10px;
     border-radius: 10px;
     margin: 5px;
 }
 
-.interlocutor {
+.received {
     display: flex;
     justify-content: left;
     margin-left: 50px;
 }
 
-.interlocutor p {
+.received div {
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;

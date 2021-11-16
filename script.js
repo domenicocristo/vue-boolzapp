@@ -8,6 +8,7 @@ var boolzapp = new Vue (
         data: {
             contacts: [
                 {
+                    activeContact: 0,
                     name: "Michele",
                     avatar: "img/avatar_1.jpg",
                     visible: "true",
@@ -106,7 +107,10 @@ var boolzapp = new Vue (
                         }
                     ],
                 },
-            ]
+            ],
+        },
+        methods: {
+            
         }
             
     }

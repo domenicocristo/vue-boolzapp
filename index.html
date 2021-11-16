@@ -67,25 +67,11 @@
 
             <section id="chat-main">
                 <ul>  
-                    <li class="user">
-                        <p>
-                            Hai portato a spasso il cane? 
-                            <span class="date-chat">10/01/2020 15:30:55</span>
-                        </p>
-                    </li>
-
-                    <li class="user">
-                        <p>
-                            Ricordati di dargli da mangiare
-                            <span class="date-chat">10/01/2020 15:50:00</span>
-                        </p>
-                    </li>
-                    
-                    <li class="interlocutor">
-                        <p>
-                            Tutto fatto!
-                            <span class="date-chat">28/03/2020 16:15:22</span>
-                        </p>
+                    <li v-for="contact, i in contacts" :class="contact.message[activeContact].status" :key="i">
+                        <div>
+                            <p>{{contact.message[activeContact].text}}</p>  
+                            <span class="date-chat">{{contact.message[activeContact].date}}</span>
+                        </div>
                     </li>
                 </ul>
             </section>
