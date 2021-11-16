@@ -40,7 +40,7 @@
 
                 <section id="container-contacts">
                     <ul>
-                        <li v-for="contact, i in contacts" :class="contact" :key="i">
+                        <li v-for="contact, i in contacts" :key="i" @click="selectContact(i)">
                             <img :src="contact.avatar" class="img-contacts">
                             <div class="text-contacts">
                                 <h3>{{contact.name}}</h3>
@@ -54,11 +54,11 @@
         </nav>
 
         <section id="chat">
-            <section id="chat-header">
-                <img src="img/avatar_1.jpg">
+            <section v-for="contact, i in contacts" :key="i" id="chat-header">
+                <img :src="contacts[activeContact].avatar">
                 <div class="text-chat">
-                    <h3>Michele</h3>
-                    <span>Ultimo accesso oggi alle 10/01/2020 15:30:55</span>
+                    <h3>{{contacts[activeContact].name}}</h3>
+                    <span>Ultimo accesso oggi alle {{contact.messages[contact.messages.length -1].date}}</span>
                 </div>
                 <i class="fas fa-search"></i>
                 <i class="fas fa-paperclip"></i>
@@ -67,7 +67,7 @@
 
             <section id="chat-main">
                 <ul>  
-                    <li v-for="message, i in contacts.[activeContact].messages" :class="message.status" :key="i">
+                    <li v-for="message, i in contacts[activeContact].messages" :class="message.status" :key="i">
                         <div>
                             <p>{{message.text}}</p>  
                             <span class="date-chat">{{message.date}}</span>

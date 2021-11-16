@@ -6,12 +6,12 @@ var boolzapp = new Vue (
     {
         el: "#container",
         data: {
+            activeContact: 0,
             contacts: [
                 {
-                    activeContact: 0,
                     name: "Michele",
                     avatar: "img/avatar_1.jpg",
-                    visible: "true",
+                    visible: "false",
                     messages: [
                         {
                             date: "10/01/2020 15:30:55",
@@ -36,7 +36,7 @@ var boolzapp = new Vue (
                 {
                     name: "Fabio",
                     avatar: "img/avatar_2.jpg",
-                    visible: "true",
+                    visible: "false",
                     messages: [
                         {
                             date: "10/01/2020 15:30:55",
@@ -51,8 +51,8 @@ var boolzapp = new Vue (
                         },
 
                         {
-                            date: "10/01/2020 16:15:22",
-                            text: "Mi piacerebbe ma devo a",
+                            date: "10/01/2020 16:15:30",
+                            text: "Mi piacerebbe ma devo andare",
                             status: "received"
                         }
                     ],
@@ -61,7 +61,7 @@ var boolzapp = new Vue (
                 {
                     name: "Samuele",
                     avatar: "img/avatar_3.jpg",
-                    visible: "true",
+                    visible: "false",
                     messages: [
                         {
                             date: "10/01/2020 15:30:55",
@@ -76,7 +76,7 @@ var boolzapp = new Vue (
                         },
 
                         {
-                            date: "10/01/2020 16:15:22",
+                            date: "10/01/2020 16:15:15",
                             text: "Ah scusa!",
                             status: "received"
                         }
@@ -86,7 +86,7 @@ var boolzapp = new Vue (
                 {
                     name: "Mario",
                     avatar: "img/avatar_4.jpg",
-                    visible: "true",
+                    visible: "false",
                     messages: [
                         {
                             date: "10/01/2020 15:30:55",
@@ -101,8 +101,8 @@ var boolzapp = new Vue (
                         },
 
                         {
-                            date: "10/01/2020 16:15:22",
-                            text: "Si, ma preferirei andare al ci",
+                            date: "10/01/2020 16:15:11",
+                            text: "Si, ma preferirei andare al cinema",
                             status: "received"
                         }
                     ],
@@ -110,8 +110,8 @@ var boolzapp = new Vue (
             ],
         },
         methods: {
-            selectContact: function() {
-
+            selectContact: function(index) {
+                this.activeContact= index;
             }
         }
             

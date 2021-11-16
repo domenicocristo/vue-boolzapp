@@ -15,6 +15,9 @@ body {
 }
 
 #container {
+    position: absolute;
+    top: 5%;
+    left: 5%;
     display: flex;
     justify-content: center;
 }
@@ -193,7 +196,7 @@ ul {
 .date-chat {
     display: block;
     color: #6a7376;
-    font-size: 13px;s
+    font-size: 13px;
 }
 
 #input-chat {
