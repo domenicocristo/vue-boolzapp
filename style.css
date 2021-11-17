@@ -12,14 +12,14 @@ body {
 .layout-back {
     height: 150px;
     background-color: #019588;
+    z-index: 0;
 }
 
 #container {
-    position: absolute;
-    top: 5%;
-    left: 5%;
     display: flex;
     justify-content: center;
+    z-index: 1;
+    margin-top: -100px;
 }
 
 /* nav */
@@ -87,11 +87,14 @@ i {
     width: 97%;
     border: none;
     border-radius: 5px;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
-#container-contacts {
-    height: 600px;
+#search-contacts input::placeholder {
+    color: #d8d9da;
+}
+
+.container-contacts {
     overflow: scroll;
 }
 
@@ -99,13 +102,17 @@ ul {
     list-style-type: none;
 }
 
-#container-contacts li {
+.container-contacts li {
     background-color: #fff;
     margin: 1px;
     cursor: pointer;
 }
 
-#container-contacts li:hover {
+.container-contacts li:hover {
+    background-color: #d6d6d6;
+}
+
+.container-contacts .active {
     background-color: #d6d6d6;
 }
 

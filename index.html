@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/icona.png">
     <title>Boolzap</title>
@@ -35,12 +35,12 @@
                 </section>
 
                 <section id="search-contacts">
-                    <input type="text" id="bar-research" onkeyup="research()" placeholder="Cerca o inizia una nuova chat">
+                    <input type="text" id="bar-research" onkeyup="research()" placeholder="&#xF002     Cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome">
                 </section>
 
-                <section id="container-contacts">
+                <section class="container-contacts">
                     <ul id="list">
-                        <li v-for="contact, i in contacts" :key="i" @click="selectContact(i)">
+                        <li v-for="contact, i in contacts" :key="i" @click="selectContact(i)" :class="i === activeContact ? 'active' : '' ">
                             <img :src="contact.avatar" class="img-contacts">
                             <div class="text-contacts">
                                 <h3>{{contact.name}}</h3>
