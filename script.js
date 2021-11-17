@@ -131,7 +131,28 @@ var boolzapp = new Vue (
                     status: "sent"
                 };
             }
-        }
-            
+        },         
     }
 );
+function research() {
+var input; 
+var filter;
+var list;
+var voices;
+var x;
+var i;
+var text;
+    input = document.getElementById("bar-research");
+    filter = input.value.toUpperCase();
+    list = document.getElementById("list");
+    voices = list.getElementsByTagName("li");
+    for (i = 0; i < voices.length; i++) {
+        x = list.getElementsByTagName("h3")[i];
+        text = x.textContent || x.innerText;
+    if (text.toUpperCase().indexOf(filter) > -1) {
+        voices[i].style.display = "";
+    } else {
+        voices[i].style.display = "none";
+    }
+    }
+}

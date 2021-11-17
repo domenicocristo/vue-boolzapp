@@ -35,11 +35,11 @@
                 </section>
 
                 <section id="search-contacts">
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input type="text" id="bar-research" onkeyup="research()" placeholder="Cerca o inizia una nuova chat">
                 </section>
 
                 <section id="container-contacts">
-                    <ul>
+                    <ul id="list">
                         <li v-for="contact, i in contacts" :key="i" @click="selectContact(i)">
                             <img :src="contact.avatar" class="img-contacts">
                             <div class="text-contacts">
