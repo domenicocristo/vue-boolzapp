@@ -11,12 +11,12 @@ var boolzapp = new Vue (
         data: {
             activeContact: 0,
             newMessage: {
-                date: "10/01/2020 15:30:55",
+                date: "15/11/2020 alle 15:30",
                 text: "",
                 status: "sent"
             },
             newAnswer: {
-                date: "10/01/2020 15:30:55",
+                date: "15/11/2020 alle 15:30",
                 text: "ok",
                 status: "received"
             },
@@ -27,19 +27,19 @@ var boolzapp = new Vue (
                     visible: "false",
                     messages: [
                         {
-                            date: "10/01/2020 15:30:55",
+                            date: "15/11/2020 alle 15:30",
                             text: "Hai portato a spasso il cane?",
                             status: "sent"
                         },
 
                         {
-                            date: "10/01/2020 15:50:00",
+                            date: "15/11/2020 alle 15:50",
                             text: "Ricordati di dargli da mangiare",
                             status: "sent"
                         },
 
                         {
-                            date: "28/03/2020 16:15:22",
+                            date: "15/11/2020 alle 16:37",
                             text: "Tutto fatto!",
                             status: "received"
                         }
@@ -52,21 +52,21 @@ var boolzapp = new Vue (
                     visible: "false",
                     messages: [
                         {
-                            date: "10/01/2020 15:30:55",
+                            date: "15/11/2020 alle 15:30",
                             text: "Ciao come stai?",
                             status: "sent"
                         },
 
                         {
-                            date: "10/01/2020 15:50:00",
+                            date: "15/11/2020 alle 15:50",
                             text: "Bene grazie! stasera ci vediamo?",
-                            status: "sent"
+                            status: "received"
                         },
 
                         {
-                            date: "10/01/2020 16:15:30",
-                            text: "Mi piacerebbe ma devo lavorare!",
-                            status: "received"
+                            date: "15/11/2020 alle 17:15",
+                            text: "Mi piacerebbe ma devo studiare!",
+                            status: "sent"
                         }
                     ],
                 },
@@ -77,21 +77,21 @@ var boolzapp = new Vue (
                     visible: "false",
                     messages: [
                         {
-                            date: "10/01/2020 15:30:55",
+                            date: "15/11/2020 alle 15:30",
                             text: "La Marianna va in campagna",
                             status: "sent"
                         },
 
                         {
-                            date: "10/01/2020 15:50:00",
+                            date: "15/11/2020 alle 15:50",
                             text: "Sicuro di non aver sbagliato chat?",
-                            status: "sent"
+                            status: "received"
                         },
 
                         {
-                            date: "10/01/2020 16:15:15",
+                            date: "15/11/2020 alle 16:15",
                             text: "Ah scusa!",
-                            status: "received"
+                            status: "sent"
                         }
                     ],
                 },
@@ -102,13 +102,13 @@ var boolzapp = new Vue (
                     visible: "false",
                     messages: [
                         {
-                            date: "10/01/2020 15:30:55",
+                            date: "15/11/2020 alle 15:30",
                             text: "Lo sai che ha aperto una nuova pizzeria?",
                             status: "sent"
                         },
 
                         {
-                            date: "10/01/2020 16:15:11",
+                            date: "15/11/2020 alle 18:15",
                             text: "Si, ma preferirei andare al cinema",
                             status: "received"
                         }
