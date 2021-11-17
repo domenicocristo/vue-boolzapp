@@ -35,7 +35,7 @@
                 </section>
 
                 <section id="search-contacts">
-                    <input type="text" placeholder="  Cerca o inizia una nuova chat">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
                 </section>
 
                 <section id="container-contacts">
@@ -54,11 +54,11 @@
         </nav>
 
         <section id="chat">
-            <section v-for="contact, i in contacts" :key="i" id="chat-header">
+            <section id="chat-header">
                 <img :src="contacts[activeContact].avatar">
                 <div class="text-chat">
                     <h3>{{contacts[activeContact].name}}</h3>
-                    <span>Ultimo accesso oggi alle {{contact.messages[contact.messages.length -1].date}}</span>
+                    <span>Ultimo accesso oggi alle {{contacts[activeContact].messages[contacts[activeContact].messages.length -1].date}}</span>
                 </div>
                 <i class="fas fa-search"></i>
                 <i class="fas fa-paperclip"></i>
@@ -78,7 +78,7 @@
 
             <section id="input-chat">
                 <i class="far fa-smile"></i>
-                <input type="text" v-model="newMessage.text" @keyup.enter="addMessage" placeholder="    Scrivi un messaggio">
+                <input type="text" v-model="newMessage.text" @keyup.enter="addMessage" placeholder="Scrivi un messaggio">
                 <i class="fas fa-microphone"></i>
             </section>
         </section>

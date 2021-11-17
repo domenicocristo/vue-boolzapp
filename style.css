@@ -82,15 +82,17 @@ i {
     justify-content: center;
 }
 
-#search-contacts input{
+#search-contacts input {
     height: 70%;
     width: 97%;
     border: none;
     border-radius: 5px;
+    padding-left: 10px;
 }
 
 #container-contacts {
     height: 600px;
+    overflow: scroll;
 }
 
 ul {
@@ -165,6 +167,7 @@ ul {
     flex-direction: column;
     height: 665px;
     background-color: #e5ddd5;
+    overflow: scroll;
 }
 
 .sent {
@@ -216,5 +219,6 @@ ul {
     width: 100%;
     border: none;
     border-radius: 20px;
+    padding-left: 20px;
 }
 /* /chat */

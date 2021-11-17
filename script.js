@@ -3,19 +3,23 @@
 // 2.1 facendo click sui contatti si appaiono le conversazioni relative al contatto
 // 3. digitando un testo nell'input e premendo il tasto enter il testo viene stampato in pagina
 // 3.2 ad ogni inserimento di testo ci sarà una risposta "ok" 1 secondo dopo
+// 4. far funzionare l'input di ricerca in modo da filtrare i contatti
 
 var boolzapp = new Vue (
     {
         el: "#container",
         data: {
             activeContact: 0,
-            newMessage: [
-                {
-                    date: "10/01/2020 15:30:55",
-                    text: "",
-                    status: "sent"
-                }
-            ],
+            newMessage: {
+                date: "10/01/2020 15:30:55",
+                text: "",
+                status: "sent"
+            },
+            newAnswer: {
+                date: "10/01/2020 15:30:55",
+                text: "ok",
+                status: "received"
+            },
             contacts: [
                 {
                     name: "Michele",
@@ -49,19 +53,19 @@ var boolzapp = new Vue (
                     messages: [
                         {
                             date: "10/01/2020 15:30:55",
-                            text: "Hai portato a spasso il cane?",
+                            text: "Ciao come stai?",
                             status: "sent"
                         },
 
                         {
                             date: "10/01/2020 15:50:00",
-                            text: "Ricordati di dargli da mangiare",
+                            text: "Bene grazie! stasera ci vediamo?",
                             status: "sent"
                         },
 
                         {
                             date: "10/01/2020 16:15:30",
-                            text: "Mi piacerebbe ma devo andare",
+                            text: "Mi piacerebbe ma devo lavorare!",
                             status: "received"
                         }
                     ],
@@ -74,13 +78,13 @@ var boolzapp = new Vue (
                     messages: [
                         {
                             date: "10/01/2020 15:30:55",
-                            text: "Hai portato a spasso il cane?",
+                            text: "La Marianna va in campagna",
                             status: "sent"
                         },
 
                         {
                             date: "10/01/2020 15:50:00",
-                            text: "Ricordati di dargli da mangiare",
+                            text: "Sicuro di non aver sbagliato chat?",
                             status: "sent"
                         },
 
@@ -99,13 +103,7 @@ var boolzapp = new Vue (
                     messages: [
                         {
                             date: "10/01/2020 15:30:55",
-                            text: "Hai portato a spasso il cane?",
-                            status: "sent"
-                        },
-
-                        {
-                            date: "10/01/2020 15:50:00",
-                            text: "Ricordati di dargli da mangiare",
+                            text: "Lo sai che ha aperto una nuova pizzeria?",
                             status: "sent"
                         },
 
@@ -120,14 +118,19 @@ var boolzapp = new Vue (
         },
         methods: {
             selectContact: function(index) {
-                this.activeContact= index;
+                this.activeContact = index;
             },
             addMessage() {
-                if (this.newMessage !== '') {
-                    this.messages.push(this.newMessage);
-                    this.newMessage = "";
-                }
-            },
+                const element = this.contacts[this.activeContact];
+                element.messages.push(this.newMessage);
+                setTimeout(() => element.messages.push(this.newAnswer), 1000);
+
+                this.newMessage = {
+                    date: "10/01/2020 15:30:55",
+                    text: "",
+                    status: "sent"
+                };
+            }
         }
             
     }
