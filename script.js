@@ -1,12 +1,21 @@
 // 1. creare un array di contatti da stampare in pagina
 // 2. visualizzare tutti i messaggi relativi al contatto 
 // 2.1 facendo click sui contatti si appaiono le conversazioni relative al contatto
+// 3. digitando un testo nell'input e premendo il tasto enter il testo viene stampato in pagina
+// 3.2 ad ogni inserimento di testo ci sarà una risposta "ok" 1 secondo dopo
 
 var boolzapp = new Vue (
     {
         el: "#container",
         data: {
             activeContact: 0,
+            newMessage: [
+                {
+                    date: "10/01/2020 15:30:55",
+                    text: "",
+                    status: "sent"
+                }
+            ],
             contacts: [
                 {
                     name: "Michele",
@@ -112,7 +121,13 @@ var boolzapp = new Vue (
         methods: {
             selectContact: function(index) {
                 this.activeContact= index;
-            }
+            },
+            addMessage() {
+                if (this.newMessage !== '') {
+                    this.messages.push(this.newMessage);
+                    this.newMessage = "";
+                }
+            },
         }
             
     }

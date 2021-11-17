@@ -78,7 +78,7 @@
 
             <section id="input-chat">
                 <i class="far fa-smile"></i>
-                <input type="text" placeholder="    Scrivi un messaggio">
+                <input type="text" v-model="newMessage.text" @keyup.enter="addMessage" placeholder="    Scrivi un messaggio">
                 <i class="fas fa-microphone"></i>
             </section>
         </section>
