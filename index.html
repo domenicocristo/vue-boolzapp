@@ -35,12 +35,12 @@
                 </section>
 
                 <section id="search-contacts">
-                    <input type="text" id="bar-research" onkeyup="research()" placeholder="&#xF002     Cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome">
+                    <input type="text" v-model="researchContact"  placeholder="&#xF002     Cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome">
                 </section>
 
                 <section class="container-contacts">
-                    <ul id="list">
-                        <li v-for="contact, i in contacts" :key="i" @click="selectContact(i)" :class="i === activeContact ? 'active' : '' ">
+                    <ul>
+                        <li v-if="contact.name.includes(researchContact)" v-for="contact, i in contacts" :key="i" @click="selectContact(i)" :class="i === activeContact ? 'active' : '' ">
                             <img :src="contact.avatar" class="img-contacts">
                             <div class="text-contacts">
                                 <h3>{{contact.name}}</h3>
@@ -67,9 +67,9 @@
 
             <section id="chat-main">
                 <ul>  
-                    <li v-for="message, i in contacts[activeContact].messages" :class="message.status" :key="i">
+                    <li v-for="message, i in contacts[activeContact].messages" :class="message.status" :key="(i)">
                         <div>
-                            <p>{{message.text}}</p>  
+                            <p>{{message.text}}</p> 
                             <span class="date-chat">{{message.date}}</span>
                             <div class="dropdown">
                                 <button class="dropbtn fas fa-chevron-down"></button>

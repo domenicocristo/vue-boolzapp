@@ -4,6 +4,7 @@
 // 3. digitando un testo nell'input e premendo il tasto enter il testo viene stampato in pagina
 // 3.2 ad ogni inserimento di testo ci sarà una risposta "ok" 1 secondo dopo
 // 4. far funzionare l'input di ricerca in modo da filtrare i contatti
+// 5. crea un menù a tendina sulle chat, con la possibilità di eliminare il messaggio
 
 var boolzapp = new Vue (
     {
@@ -20,6 +21,7 @@ var boolzapp = new Vue (
                 text: "ok",
                 status: "received"
             },
+            researchContact: "",
             contacts: [
                 {
                     name: "Michele",
@@ -134,29 +136,8 @@ var boolzapp = new Vue (
             removeMessage(index) {
                 const element = this.contacts[this.activeContact];
                 element.messages.splice(index, 1);
+                console.log(i);
             }
         },         
     }
 );
-function research() {
-var input; 
-var filter;
-var list;
-var voices;
-var x;
-var i;
-var text;
-    input = document.getElementById("bar-research");
-    filter = input.value.toUpperCase();
-    list = document.getElementById("list");
-    voices = list.getElementsByTagName("li");
-    for (i = 0; i < voices.length; i++) {
-        x = list.getElementsByTagName("h3")[i];
-        text = x.textContent || x.innerText;
-    if (text.toUpperCase().indexOf(filter) > -1) {
-        voices[i].style.display = "";
-    } else {
-        voices[i].style.display = "none";
-    }
-    }
-}
