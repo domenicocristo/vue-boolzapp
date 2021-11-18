@@ -84,7 +84,6 @@
                     <li v-for="message, i in contacts[activeContact].messages" :class="message.status" :key="(i)">
                         <div>
                             <p>{{message.text}}</p> 
-                            <span class="date-chat">{{message.date}}</span>
                             <div class="dropdown">
                                 <button class="dropbtn fas fa-chevron-down"></button>
                                 <div class="dropdown-content">
@@ -92,6 +91,7 @@
                                   <a href="#" @click="removeMessage(i)">Delete</a>
                                 </div>
                             </div>
+                            <span class="date-chat">{{message.date}}</span>
                         </div>
                     </li>
                 </ul>

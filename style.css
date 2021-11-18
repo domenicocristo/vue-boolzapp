@@ -191,10 +191,14 @@ ul {
     overflow: scroll;
 }
 
+#chat-main p {
+    display: inline-block;
+}
+
 .sent {
     display: flex;
     justify-content: right;
-    margin-right: 50px;
+    margin-right: 65px;
 }
 
 .sent div {
@@ -207,7 +211,7 @@ ul {
 .received {
     display: flex;
     justify-content: left;
-    margin-left: 50px;
+    margin-left: 65px;
 }
 
 .received div {
@@ -218,6 +222,7 @@ ul {
 }
 
 .date-chat {
+    display: block;
     color: #6a7376;
     font-size: 13px;
 }
