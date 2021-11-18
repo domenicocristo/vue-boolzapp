@@ -22,12 +22,13 @@ body {
     margin-top: -100px;
 }
 
-/* nav */
+/* Nav */
 nav {
     display: inline-block;
     background-color: #eaeaea;
 }
 
+/* Nav Header */
 #nav-header {
     display: flex;
     align-items: center;
@@ -50,7 +51,9 @@ i {
     margin-right: 15px;
     cursor: pointer;
 }
+/* /Nav Header */
 
+/* Notifiche */
 #notifications {
     display: flex;
     align-items: center;
@@ -74,7 +77,9 @@ i {
     display:  block;
     color: #6a7376;
 }
+/* /Notifiche */
 
+/* Ricerca contatti */
 #search-contacts {
     height: 50px;
     display: flex;
@@ -93,7 +98,9 @@ i {
 #search-contacts input::placeholder {
     color: #d8d9da;
 }
+/* /Ricerca contatti */
 
+/* Contatti */
 .container-contacts {
     overflow: scroll;
 }
@@ -141,13 +148,15 @@ ul {
     margin: 10px;
     font-size: 13px;
 }
-/* /nav */
+/* /Contatti */
+/* /Nav */
 
-/* chat */
+/* Chat */
 #chat {
     display: inline-block;
 }
 
+/* Chat header */
 #chat-header {
     display: flex;
     align-items: center;
@@ -171,7 +180,9 @@ ul {
 .text-chat span {
     color: #6a7376;
 }
+/* /Chat header */
 
+/* Messaggi */
 #chat-main {
     display: flex;
     flex-direction: column;
@@ -245,7 +256,9 @@ ul {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+/* /Messaggi */
 
+/* Barra inserimento messaggi */
 #input-chat {
     display: flex;
     align-items: center;
@@ -265,4 +278,5 @@ ul {
     border-radius: 20px;
     padding-left: 20px;
 }
-/* /chat */
+/* /Barra inserimento messaggi */
+/* /Chat */

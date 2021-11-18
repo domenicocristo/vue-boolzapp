@@ -16,7 +16,9 @@
     <div class="layout-back"></div>
 
     <section id="container">
+        <!-- Nav -->
         <nav>
+            <!-- Nav Header -->
             <section id="nav-header">
                 <img src="img/avatar_io.jpg">
                 <h3>Nome Utente</h3>
@@ -24,8 +26,10 @@
                 <i class="fas fa-comment-alt"></i>
                 <i class="fas fa-ellipsis-v"></i>
             </section>
+            <!-- /Nav Header -->
 
             <section id="nav-main">
+                <!-- Notifiche -->
                 <section id="notifications">
                     <i class="fas fa-bell-slash"></i>
                     <div id="text-notifications">
@@ -33,11 +37,15 @@
                         <a href="">Attiva notifiche Dekstop</a>
                     </div>
                 </section>
+                <!-- /Notifiche -->
 
+                <!-- Ricerca contatti -->
                 <section id="search-contacts">
                     <input type="text" v-model="researchContact"  placeholder="&#xF002     Cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome">
                 </section>
+                <!-- /Ricerca contatti -->
 
+                <!-- Contatti -->
                 <section class="container-contacts">
                     <ul>
                         <li v-if="contact.name.includes(researchContact)" v-for="contact, i in contacts" :key="i" @click="selectContact(i)" :class="i === activeContact ? 'active' : '' ">
@@ -50,10 +58,14 @@
                         </li>
                     </ul>
                 </section>
+                <!-- /Contatti -->
             </section>
         </nav>
+        <!-- /Nav -->
 
+        <!-- Chat -->
         <section id="chat">
+            <!-- Chat header -->
             <section id="chat-header">
                 <img :src="contacts[activeContact].avatar">
                 <div class="text-chat">
@@ -64,7 +76,9 @@
                 <i class="fas fa-paperclip"></i>
                 <i class="fas fa-ellipsis-v"></i>
             </section>
+            <!-- /Chat header -->
 
+            <!-- Messaggi -->
             <section id="chat-main">
                 <ul>  
                     <li v-for="message, i in contacts[activeContact].messages" :class="message.status" :key="(i)">
@@ -82,13 +96,17 @@
                     </li>
                 </ul>
             </section>
+            <!-- /Messaggi -->
 
+            <!-- Barra inserimento messaggi -->
             <section id="input-chat">
                 <i class="far fa-smile"></i>
                 <input type="text" v-model="newMessage.text" @keyup.enter="addMessage" placeholder="Scrivi un messaggio">
                 <i class="fas fa-microphone"></i>
             </section>
+             <!-- /Barra inserimento messaggi -->
         </section>
+        <!-- /Chat -->
     </section>
     
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
