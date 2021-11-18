@@ -71,6 +71,13 @@
                         <div>
                             <p>{{message.text}}</p>  
                             <span class="date-chat">{{message.date}}</span>
+                            <div class="dropdown">
+                                <button class="dropbtn fas fa-chevron-down"></button>
+                                <div class="dropdown-content">
+                                  <a href="#">info</a>
+                                  <a href="#" @click="removeMessage(i)">Delete</a>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 </ul>

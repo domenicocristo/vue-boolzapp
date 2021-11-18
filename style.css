@@ -204,9 +204,41 @@ ul {
 }
 
 .date-chat {
-    display: block;
     color: #6a7376;
     font-size: 13px;
+}
+
+.dropbtn {
+    background: none;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {
+    background-color: #b1b1b1;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 #input-chat {

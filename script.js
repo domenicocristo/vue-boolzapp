@@ -130,6 +130,10 @@ var boolzapp = new Vue (
                     text: "",
                     status: "sent"
                 };
+            },
+            removeMessage(index) {
+                const element = this.contacts[this.activeContact];
+                element.messages.splice(index, 1);
             }
         },         
     }
