@@ -48,7 +48,7 @@
                 <!-- Contatti -->
                 <section class="container-contacts">
                     <ul>
-                        <li v-if="contact.name.includes(researchContact)" v-for="contact, i in contacts" :key="i" @click="selectContact(i)" :class="i === activeContact ? 'active' : '' ">
+                        <li v-if="contact.name.toLowerCase().includes(researchContact.toLowerCase())" v-for="contact, i in contacts" :key="i" @click="selectContact(i)" :class="i === activeContact ? 'active' : '' ">
                             <img :src="contact.avatar" class="img-contacts">
                             <div class="text-contacts">
                                 <h3>{{contact.name}}</h3>
